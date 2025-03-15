@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HELLOME</title>
+    <link rel="icon" href="img/brand_hello_kitty_icon_158867.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/endereco.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="../js/endereco.js"></script> 
+    <script src="../js/getEndereco.js"></script>
+</head>
+<body> 
+    <div class="chinelo" >
+        <div class="cordão"></div>
+    </div>
+
+    <div class="header" id="topo">
+    <div class="container">
+
+
+        <!--REQUIRED:  validação do lado do cliente que impede que o formulário seja enviado sem que o campo correspondente seja preenchido.-->
+    <form id="endereco" > <!-- Formulário de cadastro -->
+      <div>
+        <input type="text" id="title" placeholder="Titulo"/> <!-- Campo de entrada para o nome  -->
+      </div>
+      <div>
+        <input type="text" id="cep" placeholder="CEP" /> <!-- Campo de entrada para o email  -->
+      </div>
+      <div>
+        <input type="text" id="address" placeholder="Endereco" /> <!-- Campo de entrada para a senha -->
+      
+      </div>
+      <div>
+        <input type="text" id="number" placeholder="Número"  /> <!-- Campo de entrada para a confirmação da senha -->
+      
+      </div>
+      <div>
+        <input type="text" id="complement" placeholder="Complemento"  /> <!-- Campo de entrada para a confirmação da senha -->
+      </div>
+     
+      <input type="button" onclick="enderecoUsuario()" value="Enviar"> <!-- Botão de envio do formulário de cadastro -->
+    </form>
+
+    </div>
+    </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.slider').slick({
+            slidesToShow: 3, // Quantidade de slides exibidos
+            slidesToScroll: 1, // Quantidade de slides a serem rolados
+            autoplay: true, // Auto rolamento
+            autoplaySpeed: 2000, // Velocidade do auto rolamento
+            arrows: true, // Exibir setas de navegação
+            prevArrow: '<button type="button" class="slick-prev">Previous</button>', // Personaliza a seta de navegação anterior
+            nextArrow: '<button type="button" class="slick-next">Next</button>', // Personaliza a seta de navegação seguinte
+            responsive: [
+                {
+                    breakpoint: 768, // Tamanho da tela em que o carrossel será responsivo
+                    settings: {
+                        slidesToShow: 2 // Altera a quantidade de slides exibidos em telas menores
+                    }
+                },
+                {
+                    breakpoint: 480, // Tamanho da tela em que o carrossel será responsivo
+                    settings: {
+                        slidesToShow: 1 // Altera a quantidade de slides exibidos em telas menores
+                    }
+                }
+            ]
+        });
+
+        // Adiciona o comportamento de rolagem suave aos links do menu
+        $('a[href*="#"]').on('click', function(e) {
+            e.preventDefault();
+
+            $('html, body').animate(
+                {
+                    scrollTop: $($(this).attr('href')).offset().top
+                },
+                500,
+                'linear'
+            );
+        });
+    });
+</script>
+
+
+</body>
+</html>

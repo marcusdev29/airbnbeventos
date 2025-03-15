@@ -1,0 +1,132 @@
+/* Importa as fontes Google Fonts Poppins, Roboto e Source Sans Pro */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+/* Define estilos padrão para todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos do corpo da página */
+body {
+  background-color: #E3F2FD; /* Azul claro suave */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos do contêiner principal */
+.container {
+  background-color: #BBDEFB; /* Azul pastel */
+  padding: 16px;
+  width: 350px;
+  height: 555px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+/* Estilos dos formulários */
+form {
+  position: absolute;
+  margin-top: -15px;
+  transition: .5s;
+  width: 300px;
+  height: 400px;
+}
+
+/* Estilos do contêiner dos botões */
+.buttonsForm {
+  margin-top: -50px;
+  position: relative;
+  border-radius: 30px;
+  box-shadow: 0 0 7px 0 rgba(33, 150, 243, 0.6);
+}
+
+/* Estilos dos botões dentro de .buttonsForm */
+.buttonsForm button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  position: relative;
+  padding: 10px 29px;
+  color: #1565C0; /* Azul escuro */
+  font-weight: 500;
+}
+
+/* Estilos do contêiner de cores */
+.btnColor {
+  position: absolute;
+  width: 115px;
+  height: 100%;
+  background: linear-gradient(to right, #64B5F6, #42A5F5);
+  border-radius: 30px;
+  transition: .3s;
+}
+
+/* Estilos dos campos de entrada de texto */
+input[type="text"],
+input[type="password"] {
+  border: none;
+  margin-top: 40px;
+  border-radius: 60px;
+  padding: 8px 0 8px 35px;
+  outline: none;
+  width: 100%;
+  color: #424242;
+  background: #E3F2FD; /* Azul claro */
+  border: 1px solid #90CAF9; /* Azul mais escuro */
+}
+
+/* Botão de envio */
+button[type="submit"],
+input[type="button"] {
+  background: #64B5F6; /* Azul médio */
+  color: white;
+  border-radius: 30px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 0;
+  font-size: 15px;
+  margin-top: 15px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Estilos do contêiner de checkbox */
+.divCheck {
+  margin: 10px 0 0 5px;
+  width: 80%;
+  font-size: 13px;
+  color: #1565C0;
+}
+
+/* Estilos específicos para o ID signin */
+#signin {
+  left: 25px;
+}
+
+/* Estilos específicos para o ID signup */
+#signup {
+  left: 450px;
+}
+
+/* Informações de erro */
+.span-required {
+  font-size: 12px;
+  display: none;
+  color: #D32F2F;
+  margin: 3px 0 0 1px;
+}
